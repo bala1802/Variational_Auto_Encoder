@@ -1,4 +1,4 @@
-# Variational_Auto_Encoder (VAE)
+# Variational Auto Encoder (VAE)
 
 ## Purpose:
 This repository is an implementionation of the `Auto-Encoding Variational Bayes by Diederik P. Kingma and Max Welling` paper from the scratch using `PyTorch` to get a good understanding on the concepts used in `Variational Auto Encoder`. The MNIST dataset is used in the code for understanding the concepts.
