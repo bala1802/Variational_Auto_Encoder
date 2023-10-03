@@ -4,15 +4,42 @@
 This repository is an implementionation of the `Auto-Encoding Variational Bayes by Diederik P. Kingma and Max Welling` paper from the scratch using `PyTorch` to get a good understanding on the concepts used in `Variational Auto Encoder`. The MNIST dataset is used in the code for understanding the concepts.
 
 ## Scripts:
-- `model.py`: Encoder, Decoder layers are defined and implemented for the VAE
+- `model.py`: `Encoder`, `Decoder` layers are defined and implemented for the `VAE`
 - `train.py`: To train the VAE model from scratch
 
 ## Concepts:
-Before diving into the configurations, and the implementation part, let's understand the key concepts involved in the `VAE`
+Let's understand the key concepts involved in the `VAE` along with the code.
 
 ### Purpose of VAE:
 
-- A VAE is a type of generative model that consists of an `Encoder` network and `Decoder` network, similar to traditional Auto Encoders. The objective of the VAEs is information reconstruction and generation. For the given dataset sampled from unknown distribution we can conditionally generate new data with the same distribution. 
+A `VAE` is a type of generative model that consists of an `Encoder` network and `Decoder` network, similar to traditional Auto Encoders. The objective of the VAEs is information reconstruction and generation. For the given dataset sampled from unknown distribution we can conditionally generate new data with the same distribution.
+
+### Encoder Architecture:
+
+- The `Encoder` is responsibile to convert the Input Image to the `Latent Space Distribution`
+- The `Encoder` network in `VAE` maps the input data to a probability distribution in the `latent space`, represented by a `mean` and `variance`.
+- In our example code we have used `(4, 784)` -> This represents the `batch_size` as `4` and the `input image` dimension as `28*28 = 784`.
+- A `Linear` layer is constructed with the shape of (`input_image_dimension`, `hidden_dimension`). Here the `hidden_dimension` is the dimension of the `hidden layers` present in the `Encoder` block.
+- Two more `Linear` layers are used to calculate the `mean` and `variance`
+- These parameters `mean` and `standard deviation` are returned from the `Encoder` to the `Decoder`
+
+### Latent Space Distribution:
+
+It is a probability distribution that represents the possible values or states that a hidden or latent variable can take on. This hidden variable captures the important information about the data in a compressed and structured form.
+
+#### Example:
+
+Suppose the `VAE` model is trained to generate image of cats. In this case, the `latent distribution` is like a set of instructions or rules for creating different aspects of a cat, such as it's shape, fur color, eye size etc. These instructions are probablistic, they won't give  a single fixed answer, rather a range of possibilities for each aspect.
+
+#### Concept:
+
+TODO
+
+
+### Decoder Architecture:
+
+- The `Decoder` is responsible to reconstruct the `input` from the 
+
 
 Variational Auto Encoder implemented from scratch
 
