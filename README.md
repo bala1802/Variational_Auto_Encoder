@@ -38,7 +38,21 @@ The `Latent distribution` is a Gaussian distribution with two main parameters:
 
 When the sampling is done from the Gaussian Latent distribution, it is essentially generating a point in a multidimensional space, where each dimension corresponds to a different aspect of the data. Each sample is a set of values that define how the cat should look, along with this the degree of randomness is triggered by `variance`.
 
-During training, the VAE 
+During training, the VAE learns to adjust the `mean` and `variance` of this latent distribution based on the input data.
+
+### Reparametrization:
+
+A key technique used in VAE to make the training process smoother and enable the model to learn the latent distribution effectively.
+
+#### What is the problem with the traditional sampling in VAE?
+
+In Traditional sampling, we directly sample from the Gaussian distribution by generating random numbers and scaling them by the learned `mean` and `standard deviation`
+
+            `mean + random_number * standard_deviation`
+
+TODO
+
+During the model training, 
 
 
 ### Decoder Architecture:
