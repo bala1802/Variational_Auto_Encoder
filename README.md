@@ -3,6 +3,9 @@
 ## Purpose:
 This repository is an implementionation of the `Auto-Encoding Variational Bayes by Diederik P. Kingma and Max Welling` paper from the scratch using `PyTorch` to get a good understanding on the concepts used in `Variational Auto Encoder`. The MNIST dataset is used in the code for understanding the concepts.
 
+## Architecture
+![Variational Encoder Architecute](Images/VAE_Basic.png)
+
 ## Scripts:
 - `model.py`: `Encoder`, `Decoder` layers are defined and implemented for the `VAE`
 - `train.py`: To train the VAE model from scratch
