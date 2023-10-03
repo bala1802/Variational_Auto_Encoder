@@ -31,9 +31,14 @@ It is a probability distribution that represents the possible values or states t
 
 Suppose the `VAE` model is trained to generate image of cats. In this case, the `latent distribution` is like a set of instructions or rules for creating different aspects of a cat, such as it's shape, fur color, eye size etc. These instructions are probablistic, they won't give  a single fixed answer, rather a range of possibilities for each aspect.
 
-#### Concept:
+The `Latent distribution` is a Gaussian distribution with two main parameters:
 
-TODO
+- `Mean (μ)`: This represents the center or average value of the distribution.
+- `Variance (σ^2)`: This represents how spread out or uncertain the values are around the mean
+
+When the sampling is done from the Gaussian Latent distribution, it is essentially generating a point in a multidimensional space, where each dimension corresponds to a different aspect of the data. Each sample is a set of values that define how the cat should look, along with this the degree of randomness is triggered by `variance`.
+
+During training, the VAE 
 
 
 ### Decoder Architecture:
