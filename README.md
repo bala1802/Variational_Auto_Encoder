@@ -50,9 +50,19 @@ In Traditional sampling, we directly sample from the Gaussian distribution by ge
 
             `mean + random_number * standard_deviation`
 
-TODO
+This can be challenging to backpropogate gradients while training the model. To overcome this problem, `Reparametrization` technique is applied.
 
-During the model training, 
+#### Reparametrization technique:
+
+Instead of directly sampling from the distribution, reparametrization separates the randomness from the distribution. A random number is from a Standard Gaussian distribution, and then this sampled number is used to adjust the parameters mean and standard deviation of the latent distirbution.
+
+                            epsilon = torch.randn_like(sigma)
+                            z_reparametrized = mu + sigma*epsilon
+                            x_reconstructed = self.decode(z_reparametrized)
+
+
+From the above code, 
+
 
 
 ### Decoder Architecture:
